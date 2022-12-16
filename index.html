@@ -1,54 +1,130 @@
 <!DOCTYPE html>
-<html lang="en-gb">
+<html lang="en">
   <head>
-    <title>CSS Snippet Cheatsheet</title>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="./Mini-Project2/assets/reset.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="./Mini-Project2/assets/style.css"
-    />
+    <link rel="stylesheet" href="style.css">
+    <title>Flex box cards</title>
   </head>
-
   <body>
-    <header>
-      <p class="Cheatsheet">CSS Snippet Cheatsheet</p>
-      <p>
-        Ever have trouble recalling the exact syntax for your favourite CSS
-        code? Give it a permanent home and add it to this page!
-      </p>
-    </header>
-
-    <article class="grid">
-      <div class="row">
-        <div>
-          <p>Use these three properties to create a Flexbox row layout.</p>
-        </div>
-      </div>
-      <div class="row">
-        <p>Use this to create a Flexbox column layout.</p>
-      </div>
-      <div class="row">
-        <p>Build a 12-column layout using CSS Grid.</p>
-      </div>
-      <div class="row">
-        <p>This will create a background linear gradient from top to bottom.</p>
-      </div>
-      <div class="row">
-        <p>Use transition and box shadows to glow on hover</p>
-      </div>
-      <div class="row">
+    <div id="wrapper">
+      <header>
+        <h1>CSS Snippet Cheatsheet</h1>
         <p>
-          Use position properties and negative margins to raise elements higher
-          than their natural starting point.
+          Ever have trouble recalling the exact syntax for your favorite CSS it
+          a permanent home and add it to this page! Select any snippet below and
+          it`ll automatically select all of the code for you to copy.
         </p>
-      </div>
-    </article>
+      </header>
+      <main>
+        <section id="section1" class="section">
+            <div class="item">
+                <h2 class="item_title">Flexbox Row</h2>
+             <p>Use these three properties to create a Flexbox row layout</p>
+<pre>
+
+    .row{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+      }
+
+
+  
+      
+      
+</pre>
+            </div>
+            <div class="item">
+                <h2 class="item_title">Flexbox Column</h2>
+                <p>Use this to create a Flexbox column layout.</p>
+                <pre>
+
+
+  .column{
+   display:flex;
+   flex-direction:column;
+ }
+
+
+
+
+
+</pre>
+            </div>
+            <div class="item">
+                <h2 class="item_title">CSS Grid Layout</h2>
+                <p>use these three to create a Flexbox row layout</p>
+     <pre>
+
+
+ .grid {
+    display:grid;
+    width:100%;
+    grid-template-columns:
+repeat(12, 1fr);
+ }
+
+
+                </pre>
+            </div>
+        <!-- </section>
+        <section id="section2" class="section"> -->
+            <div class="item">
+                <h2 class="item_title">Linear Gradients</h2>
+                <p>This will create a background linear gradient from top to bottom.</p>
+                <pre>
+
+ .linear-gradient-background {
+   background-image: linear-gradient(
+    rgba(232 , 102 ,236 , 0,3) 0%,
+    rgba(232, 102 ,236, 0,6) 100%
+   );
+ }
+
+
+                </pre>
+            </div>
+            <div class="item">
+                <h2 class="item_title">Box transition hover</h2>
+                <p>Use transition and box shadows to glow on hover</p>
+
+<pre>
+
+.code-card .card-header {
+   border-radius:8px;
+   transition: all 0.5s ease-in-out;
+}
+.code-card:hover,
+.code-card:hover .card-header{
+    box-shadow: inset 0px 0px 8px 
+rgba(232, 102, 236 1) 0 0 15px
+rgba(232, 102, 236 1);
+}
+</pre>
+            </div>
+            <div class="item">
+                <h2 class="item_title">Overlay Card with Title</h2>
+                <p>Use position properties and negative margin to raise elements higher than their natural starting poin.</p>
+                <div class="formated-text">
+                    <pre>
+
+
+.card-header {
+position:relative;
+margin-top: -20px;
+ }
+  
+                        
+                                        </pre>
+                </div>
+                
+            </div>
+        </section>
+      </main>
+
+    </div>
+    <footer>Made with <span>❤️</span> and CSS</footer>
   </body>
 </html>
